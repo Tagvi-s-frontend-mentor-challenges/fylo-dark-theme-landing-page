@@ -1,0 +1,25 @@
+@use "variables" as *;
+.main {
+  width: 100%;
+  padding: min(6vw, 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.875rem;
+  z-index: 1;
+  ul {
+    list-style: none;
+    display: flex;
+    white-space: nowrap;
+    gap: 25px;
+    li:hover {
+      font-weight: $bold;
+      text-decoration: underline;
+    }
+  }
+}

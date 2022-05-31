@@ -1,0 +1,15 @@
+@use "variables" as *;
+@mixin button {
+  font-size: 0.875rem;
+  padding: 1rem 4.5rem;
+  white-space: nowrap;
+  border-radius: 30px;
+  border: none;
+  font-weight: $bold;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, $cyan, $blue);
+  &:hover {
+    background: lighten($cyan, 5);
+  }
+}

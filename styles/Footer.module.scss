@@ -1,0 +1,72 @@
+@use "mx-media" as *;
+@use "variables" as *;
+.main {
+  background-color: $footerBG;
+  padding: 5vw;
+  address {
+    margin-bottom: 50px;
+    .flex {
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+      align-items: baseline;
+      font-style: normal;
+      gap: 20px;
+      p {
+        max-width: 50ch;
+      }
+      *:not(p) {
+        flex-shrink: 0;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  nav[aria-label="Social Links"] {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 100px;
+    svg {
+      border: 1px solid white;
+      padding: 10px;
+      border-radius: 50%;
+      &:hover {
+        color: $cyan;
+        border-color: $cyan;
+      }
+    }
+  }
+  nav[aria-label="Footer Navigation"] * *:hover {
+    font-weight: $bold;
+  }
+  @include lg {
+    address .flex {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav[aria-label="Footer Navigation"] {
+      display: flex;
+      gap: 2rem;
+    }
+    .lgFlex {
+      display: flex;
+      gap: 2rem;
+    }
+    .lgFlexMain {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    nav[aria-label="Social Links"] {
+      margin-top: 0;
+    }
+  }
+}

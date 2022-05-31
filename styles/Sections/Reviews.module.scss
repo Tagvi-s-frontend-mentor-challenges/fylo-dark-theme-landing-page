@@ -1,0 +1,44 @@
+@use "../mx-media.scss" as *;
+@use "../variables.scss" as *;
+.main {
+  padding: 10vw;
+  @include xl {
+    flex-direction: row;
+  }
+  article {
+    padding: min(10%, 50px);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: $reviewsBG;
+    position: relative;
+    text-align: left;
+    figcaption {
+      font-weight: $bold;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+  }
+  article:first-child::before {
+    content: "";
+    top: -2rem;
+    left: 0px;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    position: absolute;
+    background-image: url("/bg-quotes.png");
+    background-repeat: no-repeat;
+  }
+}
+.authorStatus {
+  font-weight: $normal;
+  display: block;
+}
+.imageContainer {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}

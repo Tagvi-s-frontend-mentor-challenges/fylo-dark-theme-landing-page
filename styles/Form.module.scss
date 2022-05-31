@@ -1,0 +1,85 @@
+@use "button" as *;
+@use "mx-media" as *;
+@use "variables" as *;
+.wrapper {
+  padding: 1.5rem;
+  position: relative;
+  margin-bottom: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 50%,
+      $footerBG 50%
+    );
+  }
+}
+.form {
+  width: min(100%, 1000px);
+  background-color: $introAndEmailBG;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 3.5rem;
+  border-radius: 10px;
+  p {
+    max-width: 55ch;
+  }
+  button,
+  input {
+    height: 3.25rem;
+  }
+  button,
+  input,
+  .inputWrapper,
+  .inputWrapper div {
+    width: 100%;
+  }
+  input {
+    background: white;
+    border: none;
+    padding: 1.5rem;
+    &::placeholder {
+      opacity: 50%;
+    }
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+  button {
+    @include button;
+    padding: 0;
+    font-size: 0.875rem;
+    white-space: initial;
+  }
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @include md {
+    .inputWrapper {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    button {
+      width: 300px;
+    }
+  }
+}
+
+.error {
+  color: $error;
+  font-size: 0.875rem;
+  font-weight: $bold;
+  width: max-content;
+  padding-left: 20px;
+}

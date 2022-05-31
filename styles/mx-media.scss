@@ -1,0 +1,17 @@
+@use "breakpoints.scss" as bp;
+
+@mixin md {
+  @media screen and (min-width: bp.$screen-md) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: bp.$screen-lg) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (min-width: bp.$screen-xl) {
+    @content;
+  }
+}
